@@ -1,7 +1,64 @@
-body{
+body {
     margin: 0;
     padding: 0;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: Scania;
+    src: url(../fonts/ScaniaSansCY-Regular.ttf);
+}
+
+:root {
+    --main-color: rgba(255,207,122,1);
+    --white: rgba(255,255,255,1);
+    --dark-gray:rgba(109,109,109,1);
+    --gray: rgba(148,148,148,1);
+    --black: rgba(0,0,0,1)
+}
+
+* {
+    font-family: 'Raleway', serif;
+    color: var(--white);
     box-sizing: border-box;
     text-decoration: none;
     object-fit: cover;
 }
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+
+/* header start */
+header{
+    background-color: var(--black);
+    padding: 70px 0;
+}
+.header-left{
+    gap: 20px;
+}
+.header-left .logo{
+    font-size: 24px;
+    font-weight: 500;
+}
+.header-left .slogan{
+    width: 100px;
+    color: var(--dark-gray);
+
+}
+
+/* header end */
