@@ -42,7 +42,10 @@ body {
 .align-center{
     align-items: center;
 }
-
+.center{
+    justify-content: center;
+    align-items: center;
+}
 /* header start */
 header{
     background-color: var(--black);
@@ -52,7 +55,7 @@ header{
     gap: 20px;
 }
 .header-left .logo{
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
 }
 .header-left .slogan{
@@ -60,5 +63,33 @@ header{
     color: var(--dark-gray);
 
 }
+.header-right{
+    gap: 30px;
+}
+/* nav */
+nav{
+    gap: 50px;
+}
+nav .navLink{
+    font-size: 20px;
+    color: var(--gray);
+    transition: all ease-in-out 0.4s;
+}
+nav .navLink:hover{
+    color: var(--main-color);
+    text-shadow: 1px 1px 7px var(--main-color);
+}
+.navLink.activeNav{
+    color: var(--main-color);
+}
 
+.social a{
+    padding: 10px;
+    background-color: var(--main-color);
+    border-radius: 3px;
+    transition: all ease-in-out 0.4s;
+}
+.social a:hover{
+    box-shadow: 0 0 9px var(--main-color);
+}
 /* header end */
