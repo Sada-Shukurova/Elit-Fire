@@ -15,10 +15,10 @@ body {
 
 :root {
     --main-color: rgba(255,207,122,1);
-    --white: rgba(255,255,255,1);
+    --white: #fff;
     --dark-gray:rgba(109,109,109,1);
     --gray: rgba(148,148,148,1);
-    --black: rgba(0,0,0,1)
+    --dark: #181818
 }
 
 * {
@@ -48,7 +48,7 @@ body {
 }
 /* header start */
 header{
-    background-color: var(--black);
+    background-color: var(--dark);
     padding: 70px 0;
 }
 .header-left{
