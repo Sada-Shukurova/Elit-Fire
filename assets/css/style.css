@@ -1,9 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1B1B1A;
-    background-image: linear-gradient(160deg, #181818 0%, #151514 100%);
-
+    background: #1d1d1d url(../img/1x/bg.jpg);
+    background-size: contain;
 }
 
 @font-face {
@@ -356,10 +355,33 @@ main {
 
 .refill-additional p {
     font-size: 14px;
-    width:200px ;
+    width: 200px;
 }
+
 /* refill end */
 
 /* smart fireplace start */
+.smart-fire {
+    padding: 40px 0;
+}
+
+.smart-fire-heading {
+    font-size: 40px;
+    background: linear-gradient(181deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.smart-fire-txt {
+    font-size: 20px;
+    text-align: center;
+}
+
+.smart-fire-img img {
+    width: 100%;
+}
+
 
 /* smart fireplace end */
