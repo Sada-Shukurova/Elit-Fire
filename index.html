@@ -390,23 +390,28 @@
                     <div class="author-top-right d-flex flex-column">
                         <div class="author-top-right-range-slider">
                             <p>UZUNLUĞU SEÇİN</p>
-                            <input type="range" min="1" max="100" value="50" class="slider author-slider" id="myRange">
+                            <input type="range" min="0.5" max="10.5" value="0.5" class="slider author-slider"
+                                id="myRange">
                         </div>
                         <div class="author-top-right-swiper">
                             <p>ÖN PANEL</p>
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/panel-1.webp" alt="front panel gray">
+                                        <img class="swiper-slide-images blackMatte" src="./assets/images/panel-1.webp"
+                                            alt="front panel gray" data-id="0">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/panel-2.webp" alt="fron panel silver">
+                                        <img class="swiper-slide-images stainlessSteel"
+                                            src="./assets/images/panel-2.webp" alt="fron panel silver" data-id="1">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/panel-3.webp" alt="front panel black">
+                                        <img class="swiper-slide-images blackMirror" src="./assets/images/panel-3.webp"
+                                            alt="front panel black" data-id="2">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./assets/images/panel-4.webp" alt="front panel gold">
+                                        <img class="swiper-slide-images gold" src="./assets/images/panel-4.webp"
+                                            alt="front panel gold" data-id="3">
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
@@ -420,9 +425,9 @@
                             <div class="additional-functions-list d-flex justify-between">
                                 <div class="additional-functions-list-left d-flex flex-column">
                                     <label for="safe1">Uşaqlardan qoruma
-                                        <input checked  type="checkbox" name="safe1" id="safe1">
+                                        <input checked type="checkbox" name="safe1" id="safe1">
                                     </label>
-                                    
+
                                     <label for="wifi1">Wi-Fi
                                         <input type="checkbox" name="wifi1" id="wifi1">
                                     </label>
@@ -439,7 +444,7 @@
                                     <label for="safe3">Uşaqlardan qoruma
                                         <input type="checkbox" name="safe3" id="safe3">
                                     </label>
-                                    
+
                                     <label for="wifi3">Wi-Fi
                                         <input type="checkbox" name="wifi3" id="wifi3">
                                     </label>
@@ -449,7 +454,7 @@
                                     </label>
 
                                     <label for="wifi4">Wi-Fi
-                                        <input   type="checkbox" name="wifi4" id="wifi4">
+                                        <input type="checkbox" name="wifi4" id="wifi4">
                                     </label>
                                 </div>
                             </div>
@@ -457,7 +462,29 @@
                     </div>
                 </div>
                 <!-- bottom -->
-                <div class="author-bottom"></div>
+                <div class="author-bottom d-flex  justify-between">
+                    <div class="fireplace-length">
+                        <p>Uzunluq</p>
+                        <h3 class="fireplace-length-value">
+                        </h3>
+                        <span> m</span>
+                    </div>
+                    <div class="fireplace-panel">
+                        <p>Ön panel</p>
+                        <h3 class="fireplace-panel-value">
+
+                        </h3>
+                    </div>
+                    <div class="fireplace-price">
+                        <p>Qiymət</p>
+                        <h3 class="fireplace-price-value">
+                        </h3>
+                        <span> AZN</span>
+                    </div>
+                    <div>
+                        <a class="author-bottom-btn" href="#">Müraciət edin</a>
+                    </div>
+                </div>
             </section>
             <!-- fireplace author end -->
         </div>
