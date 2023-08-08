@@ -8,4 +8,8 @@ const swiper = new Swiper(".mySwiper", {
     },
     speed: 1600,
     slidesPerView: 1,
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
 });
