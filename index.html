@@ -390,14 +390,14 @@
                     <div class="author-top-right d-flex flex-column">
                         <div class="author-top-right-range-slider">
                             <p>UZUNLUĞU SEÇİN</p>
-                            <input type="range" min="0.5" max="10.5" value="0.5" class="slider author-slider"
+                            <input type="range" min="0.5" max="10.5" value="0.5" step="0.5" class="slider author-slider"
                                 id="myRange">
                         </div>
                         <div class="author-top-right-swiper">
                             <p>ÖN PANEL</p>
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
+                            <div class="swiper " id="imageSwiper">
+                                <div class="swiper-wrapper" id="imageSlider">
+                                    <!-- <div class="swiper-slide">
                                         <img class="swiper-slide-images blackMatte" src="./assets/images/panel-1.webp"
                                             alt="front panel gray" data-id="0">
                                     </div>
@@ -412,7 +412,7 @@
                                     <div class="swiper-slide">
                                         <img class="swiper-slide-images gold" src="./assets/images/panel-4.webp"
                                             alt="front panel gold" data-id="3">
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="swiper-pagination"></div>
                                 <div class="swiper-button-next"></div>
@@ -425,36 +425,36 @@
                             <div class="additional-functions-list d-flex justify-between">
                                 <div class="additional-functions-list-left d-flex flex-column">
                                     <label for="safe1">Uşaqlardan qoruma
-                                        <input checked type="checkbox" name="safe1" id="safe1">
+                                        <input class="checkbox-input" checked type="checkbox" name="safe1" id="safe1">
                                     </label>
 
                                     <label for="wifi1">Wi-Fi
-                                        <input type="checkbox" name="wifi1" id="wifi1">
+                                        <input class="checkbox-input" type="checkbox" name="wifi1" id="wifi1">
                                     </label>
 
                                     <label for="safe2">Uşaqlardan qoruma
-                                        <input type="checkbox" name="safe2" id="safe2">
+                                        <input class="checkbox-input" type="checkbox" name="safe2" id="safe2">
                                     </label>
 
                                     <label for="wifi2">Wi-Fi
-                                        <input type="checkbox" name="wifi2" id="wifi2">
+                                        <input class="checkbox-input" type="checkbox" name="wifi2" id="wifi2">
                                     </label>
                                 </div>
                                 <div class="additional-functions-list-right d-flex flex-column">
                                     <label for="safe3">Uşaqlardan qoruma
-                                        <input type="checkbox" name="safe3" id="safe3">
+                                        <input class="checkbox-input" type="checkbox" name="safe3" id="safe3">
                                     </label>
 
                                     <label for="wifi3">Wi-Fi
-                                        <input type="checkbox" name="wifi3" id="wifi3">
+                                        <input class="checkbox-input" type="checkbox" name="wifi3" id="wifi3">
                                     </label>
 
                                     <label for="safe4">Uşaqlardan qoruma
-                                        <input checked type="checkbox" name="safe4" id="safe4">
+                                        <input class="checkbox-input" checked type="checkbox" name="safe4" id="safe4">
                                     </label>
 
                                     <label for="wifi4">Wi-Fi
-                                        <input type="checkbox" name="wifi4" id="wifi4">
+                                        <input class="checkbox-input" type="checkbox" name="wifi4" id="wifi4">
                                     </label>
                                 </div>
                             </div>
@@ -462,7 +462,7 @@
                     </div>
                 </div>
                 <!-- bottom -->
-                <div class="author-bottom d-flex  justify-between">
+                <div class="author-bottom d-flex  justify-between align-center">
                     <div class="fireplace-length">
                         <p>Uzunluq</p>
                         <h3 class="fireplace-length-value">
@@ -487,8 +487,59 @@
                 </div>
             </section>
             <!-- fireplace author end -->
+
         </div>
     </main>
+    <!-- footer start -->
+    <footer>
+        <div class="container">
+            <h2>BİZİMLƏ ƏLAQƏ SAXLAYIN</h2>
+            <div class="footer-details d-flex justify-between">
+                <div class="d-flex flex-column footer-left footer-sections">
+                    <div>
+                        <p class="footer-details-heading">WhatsApp</p>
+                        <a target="_blank" href="https://wa.me/79113064144" class="footer-details-data">+7911 306
+                            4144</a>
+                    </div>
+                    <div>
+                        <p class="footer-details-heading">Teleqram</p>
+                        <a target="_blank" href="https://t.me/elite_fire" class="footer-details-data">@elite_fire</a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column footer-middle footer-sections">
+                    <div>
+                        <p class="footer-details-heading">E-poçt</p>
+                        <a target="_blank" href="mailto:mail@example.com"
+                            class="footer-details-data">info@elite-fire.ru</a>
+                    </div>
+                    <div>
+                        <p class="footer-details-heading">Ünvanımız</p>
+                        <a class="address footer-details-data" target="_blank"
+                            href="https://www.google.com/maps/place/Varshavskoye+Hwy,+170,+Moskva,+Russia,+117405/@55.5817213,37.5903206,17z/data=!3m1!4b1!4m6!3m5!1s0x414aad91e2deeff3:0xc59f2fffbe27bad4!8m2!3d55.5817183!4d37.5928955!16s%2Fg%2F11c43v3__b?entry=ttu"
+                            class="footer-details-data">Rusiya, Moskva, Varşava şossesi 170e</a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column footer-right footer-sections">
+                    <div>
+                        <p class="footer-details-heading">Telefon</p>
+                        <a href="tel:89113064144" class="footer-details-data phone">8 911 306 4144</a>
+                    </div>
+                    <div>
+                        <a class="manager" href="">Menecerlə əlaqə saxlayın</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container d-flex justify-between">
+                <a href="./index.html" class="logo">Elite Fire</a>
+                <p>2020-2023</p>
+                <p>"METALELEKTROİNVEST" MMC</p>
+                <p>İstifadəçi müqaviləsi</p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
     <!-- swiper script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- my script -->

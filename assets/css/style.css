@@ -713,12 +713,9 @@ main {
 
 
 /* custom input checkbox */
-input[type='checkbox'] {
+.checkbox-input {
     width: 14px;
     height: 14px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
     appearance: none;
     outline: 1px solid var(--main-color);
     box-shadow: none;
@@ -727,13 +724,13 @@ input[type='checkbox'] {
     background: transparent;
 }
 
-input[type='checkbox']:checked:after {
+.checkbox-input:checked:after {
     content: '+';
     color: black;
     font-size: 20px;
 }
 
-input[type='checkbox']:checked {
+.checkbox-input:checked {
     background-color: var(--main-color);
 }
 
@@ -763,8 +760,87 @@ input[type='checkbox']:checked {
 .author-bottom .author-bottom-btn:hover {
     box-shadow: 0 0 15px var(--main-color);
 }
+
 /* data */
-.fireplace-length-value,.fireplace-price-value{
+.fireplace-length-value,
+.fireplace-price-value {
     display: inline;
 }
+
 /* fireplace author end */
+
+/* footer start */
+footer {
+    background-color: black;
+    padding: 70px 0 30px 0;
+    font-family: "Scania", "Raleway", serif;
+}
+
+footer h2 {
+    font-size: 40px;
+    background: linear-gradient(181deg, #FFF 1.87%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-sections {
+    gap: 30px;
+    /* justify-content: space-between; */
+}
+
+.footer-sections.footer-right {
+    justify-content: space-between;
+}
+.footer-details{
+    padding-bottom: 70px;
+}
+.footer-details-heading {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.footer-details-data {
+    font-size: 22px;
+    transition: 0.3s all ease-in-out;
+}
+.footer-details-data:hover{
+color: var(--main-color);
+text-shadow: 0 0 10px var(--main-color);
+}
+
+footer a.address {
+    display: inline-block;
+    width: 60%;
+}
+
+footer .footer-right a.phone {
+    font-size: 36px;
+}
+
+footer .footer-right a.manager {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    display: block;
+    transition: all 0.4s;
+}
+footer .footer-right a.manager:hover{
+    color: black;
+    background: rgb(244, 122, 76);
+    background: linear-gradient(70deg, rgba(244, 122, 76, 1) 0%, rgba(246, 230, 201, 1) 100%);
+    box-shadow: 0 0 20px var(--main-color);
+}
+/* copyright */
+.copyright{
+    padding-top: 30px;
+    border-top: 0.5px solid var(--gray);
+}
+.copyright p{
+    font-size: 14px;
+    color: var(--gray);
+}
+
+/* footer end */
