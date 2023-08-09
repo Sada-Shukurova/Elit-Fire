@@ -1,21 +1,26 @@
+
+// swiper
 const swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    effect: "fade",
     loop: true,
     autoplay: {
 
     },
-    speed: 1500,
+    speed: 1000,
     slidesPerView: 1,
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
     },
-
 });
+// ----------------------
 
+
+// front panel updating
 
 
 // range slider
@@ -30,36 +35,78 @@ slider.oninput = function () {
 // places for fireplaces data
 const frontPanel = document.querySelector('.fireplace-panel-value')
 const fireplacePrice = document.querySelector('.fireplace-price-value')
-const sliderImages = document.querySelectorAll('.swiper-slide-images')
-
+const imageSlider = document.getElementById('imageSlider')
 // data for fireplaces
-
 
 let fireplaces = [
     {
         id: 0,
         name: 'Qara mat',
-        price: 5000
+        price: 5000,
+        image: './assets/images/panel-1.webp',
     },
     {
         id: 1,
         name: 'Paslanmayan polad',
-        price: 9000
+        price: 9000,
+        image: './assets/images/panel-2.webp',
     },
     {
         id: 2,
         name: 'Qara güzgü',
-        price: 15600
+        price: 15600,
+        image: './assets/images/panel-3.webp',
     },
     {
         id: 3,
         name: 'Qızıl çiləmə',
-        price: 90000
+        price: 95000,
+        image: './assets/images/panel-4.webp',
     },
 ]
 
-// const myCallbackfunction = (this) => {
-//     // console.log("ok");
-//     console.log(this);
-// }
+function updateFrontPanel() {
+    setTimeout(() => {
+        const activeSlideIndex = frontPlaceSwiper.realIndex;
+        const activeSlide = frontPlaceSwiper.slides[activeSlideIndex];
+        const activeSlideId = parseInt(activeSlide.querySelector('img').getAttribute('data-id'));
+        const activeFireplace = fireplaces[activeSlideId];
 
+        frontPanel.innerHTML = activeFireplace.name;
+        fireplacePrice.innerHTML = activeFireplace.price;
+    }, 100);
+}
+const frontPlaceSwiper = new Swiper("#imageSwiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    autoplay: {
+        delay: 1000,
+    },
+    speed: 1200,
+    slidesPerView: 1,
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+    on: {
+        slideChange: function () {
+            updateFrontPanel();
+        },
+    },
+});
+
+
+fireplaces.forEach((fireplace, index) => {
+    const slide = `
+        <div class="swiper-slide">
+            <img class="swiper-slide-images blackMatte" src="${fireplace.image}"
+                alt="front panel gray" data-id="${index}">
+        </div>`;
+    imageSlider.innerHTML += slide;
+});
+
+
+updateFrontPanel();
