@@ -88,7 +88,7 @@ header {
 }
 
 .header-right {
-    gap: 30px;
+    gap: 40px;
 }
 
 /* nav */
@@ -121,6 +121,10 @@ nav .navLink:hover {
 
 .social a:hover {
     box-shadow: 0 0 15px var(--main-color);
+}
+
+.mobile-nav {
+    transform: translate(100%);
 }
 
 /* header end */
@@ -455,7 +459,7 @@ nav .navLink:hover {
     position: absolute;
     transform: rotate(45deg);
     bottom: -37.5px;
-    left: 75.6%;
+    left: 68%;
 }
 
 .catalog-left-middle-heading {
@@ -942,9 +946,12 @@ footer .footer-right a.manager:hover {
     }
 
     .catalog-left-top-section p.catalog-small-line::after {
-        left: 91.6%;
+        left: 82.1%;
+        transform: rotate(125deg);
+        bottom: -41px;
     }
 }
+
 
 @media only screen and (max-width:1140px) {
     .container {
