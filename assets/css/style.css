@@ -833,6 +833,7 @@ footer h2 {
 
 .footer-sections.footer-right {
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer-details {
