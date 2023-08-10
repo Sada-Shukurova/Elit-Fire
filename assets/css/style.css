@@ -1690,4 +1690,50 @@ footer .footer-right a.manager:hover {
         top: 47%;
         left: 22%;
     }
+
+    .catalog-left-top-section p.catalog-small-line::after {
+        left: 55.7%;
+    }
+
+    .catalog-section-bottom-swiper {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .catalog-section-bottom-swiper * {
+        width: 100%;
+    }
+
+    .catalog-section-bottom-swiper .swiper {
+        height: 300px;
+    }
+
+    .catalog-bottom-swiper-right .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: -40%;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: -40%;
+    }
+
+    .catalog-bottom-swiper-right .mySwiper .swiper-button-next,
+    .catalog-bottom-swiper-left .mySwiper .swiper-button-next {
+        left: 39%;
+    }
+
+    .author-top {
+        align-items: center;
+    }
+
+    .author-top-right-range-slider {
+        width: 71%;
+    }
+
+    .solution-images,
+    .laboratory-images {
+        width: 100%;
+        flex-direction: column;
+    }
 }
