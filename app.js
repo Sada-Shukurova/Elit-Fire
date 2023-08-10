@@ -7,10 +7,10 @@ const swiper = new Swiper(".mySwiper", {
     },
     effect: "fade",
     loop: true,
-    autoplay: {
+    // autoplay: {
 
-    },
-    speed: 1000,
+    // },
+    // speed: 1000,
     slidesPerView: 1,
     pagination: {
         el: ".swiper-pagination",
@@ -136,3 +136,12 @@ function typeTextFunc() {
 
 
 typeTextFunc();
+
+
+// burger menu
+const hamburger=document.querySelector('.hamburger')
+const mobileNav=document.querySelector('.mobile-nav')
+hamburger.addEventListener('click',function(){
+mobileNav.style.display='flex';
+document.body.style.overflow = 'hidden';
+})
