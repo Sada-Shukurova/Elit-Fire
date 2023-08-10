@@ -128,7 +128,6 @@ function typeTextFunc() {
     let typeText = setInterval(() => {
         if (index == listTexts[current].length - 1) {
             clearInterval(typeText);
-            clearTextFunc();
         } else {
             index++;
             type.textContent += listTexts[current][index];
