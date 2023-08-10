@@ -7,10 +7,10 @@ const swiper = new Swiper(".mySwiper", {
     },
     effect: "fade",
     loop: true,
-    // autoplay: {
+    autoplay: {
 
-    // },
-    // speed: 1000,
+    },
+    speed: 1000,
     slidesPerView: 1,
     pagination: {
         el: ".swiper-pagination",
@@ -20,7 +20,6 @@ const swiper = new Swiper(".mySwiper", {
 // ----------------------
 
 
-// front panel updating
 
 
 // range slider
@@ -64,6 +63,7 @@ let fireplaces = [
         image: './assets/images/panel-4.webp',
     },
 ]
+// front panel updating
 
 function updateFrontPanel() {
     setTimeout(() => {
@@ -111,6 +111,9 @@ fireplaces.forEach((fireplace, index) => {
 
 updateFrontPanel();
 // --------------------
+
+// type text
+
 const type = document.querySelector('.type-text');
 
 let listTexts = ['Bioetanolun xüsusi yanma texnologiyası sayəsində inanılmaz gözəllikdə atəşə nail olduq'];
