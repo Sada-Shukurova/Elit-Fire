@@ -139,9 +139,11 @@ typeTextFunc();
 
 
 // burger menu
-const hamburger=document.querySelector('.hamburger')
-const mobileNav=document.querySelector('.mobile-nav')
-hamburger.addEventListener('click',function(){
-mobileNav.style.display='flex';
-document.body.style.overflow = 'hidden';
+const hamburger = document.querySelector('.hamburger');
+const mobileNav = document.querySelector('.mobile-nav');
+
+hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('openNav');
+    document.body.classList.toggle('whenNavOpen');
 })

@@ -64,7 +64,7 @@ body {
 
 /* header start */
 header {
-    padding: 60px 0;
+    padding: 30px 0;
     position: sticky;
     top: 0;
     width: 100%;
@@ -126,9 +126,7 @@ nav .navLink:hover {
 /* header end */
 
 /* hero start */
-main {
-    /* background-color: var(--dark); */
-}
+
 
 .hero {
     padding: 20px 0 70px 0;
@@ -898,57 +896,10 @@ footer .footer-right a.manager:hover {
 /* MOBILE NAVIGATION */
 .hamburger {
     display: none;
+    cursor: pointer;
 }
 
-.mobile-nav {
-    z-index: 50;
-    background: rgb(0, 0, 0) no-repeat url(../images/kamin-fire.png);
-    background-position: 41% bottom;
-    background-size: cover;
-    gap: 35px;
-    padding: 40px 0;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    right: 0;
-    top: 0;
-    display: none;
-    transition: 0.5s ease-in-out all;
-    transform: translate(100%);
-}
 
-.mobile-nav a.navLink {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 4px;
-    padding: 10px;
-    color: #cfcfcf;
-    box-shadow: 0 0 7px var(--main-color);
-}
-
-.mobile-nav a.navLink:hover {
-    box-shadow: 0 0 15px var(--main-color);
-    text-shadow: none;
-    color: var(--main-color);
-}
-
-.mobile-nav .social {
-    padding: 12px;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 5px var(--main-color);
-    border-radius: 4px;
-}
-
-.mobile-nav .social a {
-    background: none;
-}
-
-.mobile-nav .social a svg path {
-    fill: #cfcfcf;
-}
-
-.mobile-nav .social a:hover {
-    box-shadow: none;
-}
 
 /* ------------------ */
 
@@ -1166,7 +1117,58 @@ footer .footer-right a.manager:hover {
         .container {
             max-width: 620px;
         }
-
+        /* ---------MOBILE NAV--------- */
+        body.whenNavOpen{
+            overflow: hidden;
+        }
+        .mobile-nav {
+            z-index: 50;
+            background: rgb(0, 0, 0) no-repeat url(../images/kamin-fire.png);
+            background-position: 41% bottom;
+            background-size: cover;
+            gap: 35px;
+            padding: 40px 0;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            right: 0;
+            top: 0;
+            transition: 0.5s linear all;
+            transform: translate(100%);
+        }
+        .mobile-nav.openNav{
+            transform: translate(0%);
+        }
+        
+        .mobile-nav a.navLink {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 4px;
+            padding: 10px;
+            color: #cfcfcf;
+            box-shadow: 0 0 7px var(--main-color);
+        }
+        
+        .mobile-nav a.navLink:hover {
+            box-shadow: 0 0 15px var(--main-color);
+            text-shadow: none;
+            color: var(--main-color);
+        }
+        
+        .mobile-nav .social {
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 5px var(--main-color);
+            border-radius: 4px;
+        }
+        
+        .mobile-nav .social a {
+            background: none;
+        }
+        
+        .mobile-nav .social a svg path {
+            fill: #cfcfcf;
+        }
+        
         .hamburger {
             display: block;
             position: absolute;
@@ -1187,11 +1189,33 @@ footer .footer-right a.manager:hover {
             transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
         }
 
+        .hamburger span:first-child {
+            transform-origin: 0% 0%;
+            transition: 0.5s all ease-in-out;
+        }
+
+        .hamburger span:last-child {
+            transform-origin: 0% 100%;
+            transition: 0.5s all ease-in-out;
+        }
+
+        .hamburger.open span:first-child {
+            transform: rotate(45deg) translate(-1px, -1px)
+        }
+
+        .hamburger.open span:last-child {
+            transform: rotate(-45deg) translate(2px, -2px);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
         header {
             padding: 10px 0;
             position: relative;
         }
-
+/* ----------------------- */
         .hero-left .hero-heading {
             font-size: 36px;
         }
@@ -1210,7 +1234,6 @@ footer .footer-right a.manager:hover {
 
         .mobile-nav {
             align-items: center;
-            transform: translate(0);
             justify-content: center;
             padding: 0;
             position: fixed;
