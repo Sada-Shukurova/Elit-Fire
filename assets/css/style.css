@@ -125,6 +125,7 @@ nav .navLink:hover {
 
 .mobile-nav {
     transform: translate(100%);
+    display: none;
 }
 
 /* header end */
@@ -937,6 +938,11 @@ footer .footer-right a.manager:hover {
         max-width: 1000px;
     }
 
+    .hero .hero-right::after {
+        top: 30%;
+        right: 15%;
+    }
+
     .empty-circle {
         left: 26%;
     }
@@ -1029,6 +1035,7 @@ footer .footer-right a.manager:hover {
         font-size: small;
     }
 
+
     .hero-left {
         width: 55%;
     }
@@ -1040,8 +1047,8 @@ footer .footer-right a.manager:hover {
     .hero .hero-right::after {
         width: 300px;
         height: 180px;
-        top: 42%;
-        right: 11%;
+        top: 24%;
+        right: 15%;
     }
 
     .fire-bottom-icons p {
@@ -1151,6 +1158,7 @@ footer .footer-right a.manager:hover {
             top: 0;
             transition: 0.5s linear all;
             transform: translate(100%);
+            display: flex;
         }
 
         .mobile-nav.openNav {
