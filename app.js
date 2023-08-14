@@ -144,8 +144,47 @@ typeTextFunc();
 const hamburger = document.querySelector('.hamburger');
 const mobileNav = document.querySelector('.mobile-nav');
 
+const navLinks = document.querySelectorAll('a.navLink')
+
 hamburger.addEventListener('click', function () {
     hamburger.classList.toggle('open');
     mobileNav.classList.toggle('openNav');
     document.body.classList.toggle('whenNavOpen');
+
+
 })
+navLinks.forEach((link) => {
+    link.onclick = function () {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('openNav');
+        document.body.classList.remove('whenNavOpen');
+    };
+});
+// scroll spy
+$(document).ready(function () {
+    var navLinks = $('a.navLink');
+    var sections = $('section');
+    var footer = $('footer');
+
+    var observerOptions = {
+        rootMargin: '-220px 0px -220px 0px'
+    };
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                setTimeout(function () {
+                    var targetLink = navLinks.filter('[href="#' + entry.target.id + '"]');
+                    navLinks.not(targetLink).removeClass('activeNav');
+                    targetLink.addClass('activeNav');
+                }, 250);
+            }
+        });
+    }, observerOptions);
+
+    sections.each(function () {
+        observer.observe(this);
+    });
+
+    observer.observe(footer.get(0));
+});

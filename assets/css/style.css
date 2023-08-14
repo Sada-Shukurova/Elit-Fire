@@ -107,8 +107,8 @@ nav .navLink:hover {
     text-shadow: 1px 1px 7px var(--main-color);
 }
 
-.navLink.activeNav {
-    color: var(--main-color);
+.activeNav {
+    color: var(--main-color) !important;
 }
 
 .social a {

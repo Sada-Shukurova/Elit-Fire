@@ -25,10 +25,10 @@
             <div class="header-right d-flex align-center">
 
                 <nav class="d-flex align-center">
-                    <a class="navLink" href="#">Məhsullar</a>
-                    <a class="navLink activeNav" href="#">Konstruktor</a>
-                    <a class="navLink" href="#">Təcrübə</a>
-                    <a class="navLink" href="#">Əlaqə</a>
+                    <a class="navLink" href="#products">Məhsullar</a>
+                    <a class="navLink" href="#constructor">Konstruktor</a>
+                    <a class="navLink" href="#experience">Təcrübə</a>
+                    <a class="navLink" id="footerLink" href="#contact">Əlaqə</a>
                 </nav>
 
                 <div class="social">
@@ -52,10 +52,10 @@
     <!-- MOBILE NAVIGATION -->
     <div class="mobile-nav d-flex flex-column ju">
         <nav class="d-flex align-center flex-column">
-            <a class="navLink" href="#">Məhsullar</a>
-            <a class="navLink activeNav" href="#">Konstruktor</a>
-            <a class="navLink" href="#">Təcrübə</a>
-            <a class="navLink" href="#">Əlaqə</a>
+            <a class="navLink" href="#products">Məhsullar</a>
+            <a class="navLink" href="#constructor">Konstruktor</a>
+            <a class="navLink" href="#experience">Təcrübə</a>
+            <a class="navLink" href="#contact">Əlaqə</a>
         </nav>
 
         <div class="social d-flex center">
@@ -72,7 +72,7 @@
     <main>
         <div class="container">
             <!-- hero start -->
-            <section class="hero d-flex justify-between">
+            <section id="hero" class="hero d-flex justify-between">
                 <div class="hero-left d-flex flex-column">
                     <h1 class="hero-heading">AVTOMATIK BIOKAMINLƏR</h1>
                     <p class="hero-price">99 000 AZN-dan</p>
@@ -111,7 +111,7 @@
             <!-- hero end -->
 
             <!-- fire start -->
-            <section class="fire-section d-flex flex-column align-center">
+            <section id="experience" class="linkNavigation fire-section d-flex flex-column align-center">
                 <div class="fire-top d-flex flex-column align-center">
                     <h2 class="fire-heading">ƏSL YÜKSƏK ATƏŞ EVİNİZDƏ</h2>
                     <p class="fire-txt type-text">
@@ -239,7 +239,7 @@
             <!-- refill end -->
 
             <!-- smart fireplace start -->
-            <section class="smart-fire">
+            <section id="products" class="linkNavigation smart-fire">
                 <h1 class="smart-fire-heading">AĞILLI KAMİN - ÇOX AĞILLIDIR</h1>
                 <p class="smart-fire-txt">Ağıllı evlə bağlı qərarınız olmasa belə. Yandex.
                 <p class="smart-fire-txt">Alice və Mi Home ilə əla anlaşırıq.</p>
@@ -410,7 +410,7 @@
             <!-- laboratory end -->
 
             <!-- fireplace author start -->
-            <section class="fireplace-author">
+            <section id="constructor" class="linkNavigation fireplace-author">
                 <h2>SİZ KAMİNİNİZİN MÜƏLLİFİSİNİZ</h2>
                 <!-- top -->
                 <div class="author-top d-flex justify-between">
@@ -521,7 +521,7 @@
         </div>
     </main>
     <!-- footer start -->
-    <footer>
+    <footer class="linkNavigation" id="contact">
         <div class="container">
             <h2>BİZİMLƏ ƏLAQƏ SAXLAYIN</h2>
             <div class="footer-details d-flex justify-between">
@@ -571,6 +571,9 @@
     </footer>
     <!-- footer end -->
     <!-- swiper script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- my script -->
     <script src="./app.js"></script>
